@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dev.finances$</title>
 
+    <link rel="stylesheet" href="./styles/dark_mode.css">
     <link rel="stylesheet" href="./styles/style.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,7 +13,14 @@
   </head>
   <body>
     <header>
-      <img src="./assets/logo.svg" alt="Logo Dev Finance">
+      <div class="division">
+        <img src="./assets/web_images/logo.svg" alt="Logo Dev Finance">
+        <div class="toggle">
+          <input type="checkbox" id="switch" name="theme">
+          <label for="switch">Toggle</label>
+        </div>
+      </div>
+        
     </header>
 
     <main class="container">
@@ -22,7 +30,7 @@
             <div class="card">
                 <h3>
                   <span>Entradas</span>
-                  <img src="./assets/income.svg" alt="Imagem de entradas">
+                  <img src="./assets/web_images/income.svg" alt="Imagem de entradas">
                 </h3>
                 <p id="incomeDisplay">R$ 0,00</p>
             </div>
@@ -30,7 +38,7 @@
             <div class="card">
               <h3>
                 <span>Saídas</span>
-                <img src="./assets/expense.svg" alt="Imagem de saídas">
+                <img src="./assets/web_images/expense.svg" alt="Imagem de saídas">
               </h3>
                 <p id="expenseDisplay">R$ 0,00</p>
             </div>
@@ -38,7 +46,7 @@
             <div class="card total">
               <h3>
                 <span>Total</span>
-                <img src="./assets/total.svg" alt="Imagem de total">
+                <img src="./assets/web_images/total.svg" alt="Imagem de total">
               </h3>
                 <p id="totalDisplay">R$ 0,00</p>
             </div>
@@ -46,7 +54,6 @@
 
         <section id="transaction">
             <h2 class="sr-only">Transações</h2>
-
             <a onclick="Modal.open()" href="#" class="button new">+ Nova Transação</a>
 
             <table id="data-table">
@@ -89,7 +96,7 @@
 
             <div class="input-group actions">
               <a onclick="Modal.close()" href="#" class="button cancel">Cancelar</a>
-              <button>Salvar</button>
+              <button class="submit">Salvar</button>
             </div>
           </form>
         </div>
@@ -101,5 +108,6 @@
     </footer>
 
     <script src="./scripts/scripts.js"></script>
+    <script src="./scripts/dark_mode.js"></script>
   </body>
 </html>
